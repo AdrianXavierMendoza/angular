@@ -1,0 +1,23 @@
+<style>
+img{
+    display: inline-block;
+    vertical-align: top;
+}
+#reviews{
+    display: inline-block;
+    height: 100px;
+    overflow: scroll;
+}
+</style>
+
+<div  class="show">
+    <p class="title">{{cakeToShow.baker}}</p>
+    <img src="{{cakeToShow.image}}" alt="" height='100px'>
+    <div id='reviews'>
+    <p>Avg Rating: {{cakeToShow.ratingTotal}}</p>
+    <h3 *ngFor='let review of cakeToShow.reviews'>
+        <h5>{{review.comments}}</h5>
+        <h5>{{review.rating}}</h5>
+    </h3>
+    </div>
+  </div>
